@@ -1,0 +1,37 @@
+.container{
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.saludo{
+    font-weight: bold;
+    background: radial-gradient(circle, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+    background-color: slategray;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.li-individual{
+    text-decoration: none;
+    margin: 0 10px;
+    color: white;
+}

@@ -12,7 +12,7 @@
     border-radius: 50%;
     height: 120px;
     width: 120px;
-    margin: 0 auto;
+    margin: 20px auto;
     margin: 20 0;
 }
 .cajatexto{
@@ -22,7 +22,7 @@
     width: 100%;
     padding: 15px;
     border-width: 1px;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 .cajatexto:focus{
     outline: 1px solid cornflowerblue;
@@ -47,6 +47,12 @@
     justify-content: space-around;
     align-items: center;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .btnswitch{
     background-color: darkblue;
     border-radius: 30px;
@@ -54,4 +60,10 @@
     border-width: 0px;
     color: white;
     font-size: 16px;
+    text-decoration: none;
+}
+.datosfail {
+    text-align: center;
+    font-size: 16px;
+    color: red;
 }

@@ -1,38 +1,40 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 //Importando los modulos de firebase
 import appFirebase from '../src/credenciales'
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
 const auth = getAuth(appFirebase)
 //Importar componentes
-import Login from './nav/Login'
-import Home from './nav/Home'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Register from './nav/Register'
+import Login from './home/Login'
+import Home from './home/Home'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Register from './home/Register'
 
 
 function App() {
 
   const [usuario, setUsuario] = useState(null)
 
-  onAuthStateChanged(auth, (usuarioFirebase) => {
-    if(usuarioFirebase){
-      setUsuario(usuarioFirebase)
-    }else{
-      setUsuario(null)
-    }
-  })
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (usuarioFirebase) => {
+      if(usuarioFirebase){
+        setUsuario(usuarioFirebase)
+        console.log(usuarioFirebase)
+      }else{
+        setUsuario(null)
+      }
+    })
+    return () => unsubscribe()
+  }, [])
 
   return (
-    <BrowserRouter>
-      <div>
-        {usuario ? <Home correoUsuario={usuario.email}/> : <Login/>}
-      </div>
-      <Routes>
-        <Route path="/registro" element={<Register />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-      </Routes>
-    </BrowserRouter>
+  <BrowserRouter>
+    <Routes>
+      <Route path="*" element={usuario ? <Home correoUsuario={usuario.email}/> : <Navigate to="/login" />}/>
+      <Route path="/login" element={<Login />} />
+      <Route path="/registro" element={<Register />} />
+    </Routes>
+  </BrowserRouter>
   )
 }
 
