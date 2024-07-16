@@ -1,0 +1,51 @@
+.planesgral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.planes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 1000px;
+    margin: 60px 0;
+}
+.informacionextra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #dbe9ee;
+    padding: 20px 0;
+}
+.infoplanes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+.infoprincipal {
+    display: flex;
+    background-color: #F7EBE8;
+    margin: 20px 0;
+    padding: 50px;
+}
+.infogenerica {
+    display: flex;
+}
+.cajasinfo {
+    margin: 0 20px;
+    text-align: center;
+}
+.datos {
+    padding: 0 20px;
+    line-height: 20px;
+}
+.imginfo {
+    width: 250px;
+}

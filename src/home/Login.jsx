@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Aguila from '../assets/Logo.png'
-import LogoPag from '../assets/LogoPag.png'
+import LogoPag from '../assets/LogoConFondo.png'
 import './Login.css'
 import appFirebase from '../credenciales'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
@@ -33,7 +33,7 @@ function Login() {
       <div className="row">
         <div className="col-md-4">
           <div className="padre">
-            <div className="card card-body shadow-lg">
+            <div className="cajalogin shadow-lg">
               <img src={LogoPag} alt="" className='estilo-profile' />
               <form onSubmit={functAutenticacion}>
                 <label>Ingrese Email</label>

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     min-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,11 +10,19 @@
 }
 .saludo{
     font-weight: bold;
-    background: radial-gradient(circle, #ff0000, #0000ff);
+    background: radial-gradient(circle, #1DADFF, #00D8FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    font-size: 100px;
+}
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 100px;
 }
 nav{
     display: flex;
@@ -21,7 +30,7 @@ nav{
     align-items: center;
     width: 100%;
     padding: 0 50px;
-    background-color: slategray;
+    background-color: #252627;
 }
 ul{
     display: flex;
@@ -34,4 +43,16 @@ ul{
     text-decoration: none;
     margin: 0 10px;
     color: white;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+.logout {
+    border: none;
+    padding: 0 5px;
+    background-color: transparent;
+    color: #1DADFF;
 }

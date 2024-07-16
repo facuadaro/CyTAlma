@@ -1,0 +1,28 @@
+.abonos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 100px;
+}
+.abonos h1 {
+    margin: 40px 0;
+}
+.infoservicios {
+    display: flex;
+    flex-direction: column;
+}
+.caja1, .caja2 {
+    display: flex;
+}
+.servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+}
+.imgabono {
+    width: 100px;
+}
